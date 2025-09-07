@@ -10,9 +10,11 @@ import ProductFilter from './features/ProductFilter';
 import StateDemo from './features/StateDemo';
 import EffectDemo from './features/EffectDemo';
 import ParllelAPI from './features/ParllelAPI';
+import DebounceThrottlle from './features/DebounceThrottlle';
 
 
 function App() {
+
   const products = [
     { id: 1, name: 'iPhone 15', category: 'electronics', price: 999, rating: 4.8 },
     { id: 2, name: 'Samsung Galaxy S24', category: 'electronics', price: 899, rating: 4.7 },
@@ -25,6 +27,7 @@ function App() {
   ];
 
   return (
+
     <BrowserRouter>
       <Header />
       <div className="min-h-screen bg-gray-50">
@@ -35,11 +38,13 @@ function App() {
             <Route path="/state-demo" element={<><Sidebar /><main className='flex-1 p-8'><StateDemo /></main></>} />
             <Route path="/effect-demo" element={<><Sidebar /><main className='flex-1 p-8'><EffectDemo /></main></>} />
             <Route path="/parllel-api" element={<><Sidebar /><main className='flex-1 p-8'><ParllelAPI /></main></>} />
+            <Route path='/debounce-throttle' element={<><Sidebar /><main className='flex-1 p-8'><DebounceThrottlle /></main></>} />
           </Routes>
         </div>
       </div>
       <Footer />
     </BrowserRouter>
+
   );
 }
 

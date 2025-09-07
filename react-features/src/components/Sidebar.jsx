@@ -1,12 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
-import { FiHome, FiFilter, FiLayers, FiZap } from 'react-icons/fi';
+import { MdHome, MdFilterList, MdLayers, MdBolt, MdCloud, MdTimer } from 'react-icons/md';
 
 const navItems = [
-  { name: 'Home', path: '/', icon: FiHome },
-  { name: 'Product Filter', path: '/product-filter', icon: FiFilter },
-  { name: 'State Demo', path: '/state-demo', icon: FiLayers },
-  { name: 'Effect Demo', path: '/effect-demo', icon: FiZap },
-  { name: 'Parallel API', path: '/parllel-api', icon: FiZap }
+  { name: 'Home', path: '/', icon: MdHome },
+  { name: 'Product Filter', path: '/product-filter', icon: MdFilterList },
+  { name: 'State Demo', path: '/state-demo', icon: MdLayers },
+  { name: 'Effect Demo', path: '/effect-demo', icon: MdBolt },
+  { name: 'Parallel API', path: '/parllel-api', icon: MdCloud },
+  { name: 'Debounce & Throttle', path: '/debounce-throttle', icon: MdTimer },
 ];
 
 function Sidebar() {

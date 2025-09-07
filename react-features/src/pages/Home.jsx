@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FiFilter, FiLayers, FiZap } from 'react-icons/fi';
+import { FaStar, FaBolt, FaExchangeAlt } from 'react-icons/fa';
 import '../App.css';
 
 function Home() {
@@ -17,28 +18,34 @@ function Home() {
       </div>
       <div className="max-w-5xl w-full mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
-          <img src="/src/assets/feature-illustration.svg" alt="State Demo Illustration" className="h-16 w-16 mb-3" />
+          <FiLayers className="h-16 w-16 mb-3 text-blue-700" />
           <h2 className="text-xl font-bold text-blue-700 mb-1">State Demo</h2>
           <p className="text-gray-600 mb-3">See how React state works in practice with enterprise patterns.</p>
           <Link to="/state-demo" className="bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800 transition">Try State Demo</Link>
         </div>
         <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
-          <img src="/src/assets/feature-illustration.svg" alt="Effect Demo Illustration" className="h-16 w-16 mb-3" />
+          <FiZap className="h-16 w-16 mb-3 text-purple-700" />
           <h2 className="text-xl font-bold text-purple-700 mb-1">Effect Demo</h2>
           <p className="text-gray-600 mb-3">Learn about useEffect and side effects in enterprise apps.</p>
           <Link to="/effect-demo" className="bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-800 transition">Try Effect Demo</Link>
         </div>
         <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
-          <img src="/src/assets/feature-illustration.svg" alt="Product Filter Illustration" className="h-16 w-16 mb-3" />
+          <FiFilter className="h-16 w-16 mb-3 text-pink-700" />
           <h2 className="text-xl font-bold text-pink-700 mb-1">Product Filter</h2>
           <p className="text-gray-600 mb-3">Filter products by category, price, and rating with advanced UI.</p>
           <Link to="/product-filter" className="bg-pink-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-pink-800 transition">Try Product Filter</Link>
         </div>
         <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
-          <img src="/src/assets/feature-illustration.svg" alt="Product Filter Illustration" className="h-16 w-16 mb-3" />
+          <FaStar className="h-16 w-16 mb-3 text-yellow-500" />
           <h2 className="text-xl font-bold text-pink-700 mb-1">Parllel API</h2>
           <p className="text-gray-600 mb-3">Star wars api with promise.all further with react query</p>
-          <Link to="/parllel-api" className="bg-pink-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-pink-800 transition">Try Product Filter</Link>
+          <Link to="/parllel-api" className="bg-pink-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-pink-800 transition">Try Parllel API</Link>
+        </div>
+        <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <FaExchangeAlt className="h-16 w-16 mb-3 text-pink-700" />
+          <h2 className="text-xl font-bold text-pink-700 mb-1">Debounce & Throttle</h2>
+          <p className="text-gray-600 mb-3">Learn how to implement debounce and throttle in React applications.</p>
+          <Link to="/debounce-throttle" className="bg-pink-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-pink-800 transition">Try Debounce&Throttle</Link>  
         </div>
       </div>
     </section>
