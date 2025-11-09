@@ -1,10 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
-import { MdHome, MdFilterList, MdLayers, MdBolt, MdCloud, MdTimer } from 'react-icons/md';
+import { MdFilterList, MdLayers, MdBolt, MdCloud, MdTimer } from 'react-icons/md';
 
 const navItems = [
-  { name: 'Home', path: '/', icon: MdHome },
   { name: 'Product Filter', path: '/product-filter', icon: MdFilterList },
-  { name: 'State Demo', path: '/state-demo', icon: MdLayers },
+  { name: 'Transition Demo', path: '/useTransition-19', icon: MdLayers },
   { name: 'Effect Demo', path: '/effect-demo', icon: MdBolt },
   { name: 'Parallel API', path: '/parllel-api', icon: MdCloud },
   { name: 'Debounce & Throttle', path: '/debounce-throttle', icon: MdTimer },
@@ -13,8 +12,8 @@ const navItems = [
 function Sidebar() {
   const location = useLocation();
   return (
-    <aside className="hidden md:flex flex-col w-72 min-h-[calc(100vh-4rem)] bg-gradient-to-b from-white to-blue-50 border-r shadow-lg py-8 px-6 relative overflow-hidden" aria-label="Sidebar Navigation">
-      <img src="/src/assets/side-decor.svg" alt="Sidebar Decorative Gradient" className="absolute left-0 top-0 h-full w-20 opacity-80 pointer-events-none select-none" style={{zIndex:0}} />
+    <aside className="hidden md:flex flex-col w-72 min-h-[calc(100vh-4rem)] bg-linear-to-b from-white to-blue-50 border-r shadow-lg py-8 px-6 relative overflow-hidden" aria-label="Sidebar Navigation">
+      <img src="/src/assets/side-decor.svg" alt="Sidebar Decorative Gradient" className="absolute left-0 top-0 h-full w-20 opacity-80 pointer-events-none select-none" style={{ zIndex: 0 }} />
       <div className="mb-8 flex flex-col items-center relative z-10">
         <img src="/src/assets/feature-illustration.svg" alt="Feature Illustration" className="h-20 w-20 mb-2" />
         <h2 className="text-2xl font-bold text-blue-700">Feature Demos</h2>

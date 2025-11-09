@@ -7,10 +7,11 @@ import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import ProductFilter from './features/ProductFilter';
-import StateDemo from './features/StateDemo';
 import EffectDemo from './features/EffectDemo';
 import ParllelAPI from './features/ParllelAPI';
 import DebounceThrottlle from './features/DebounceThrottlle';
+import NotFound from './pages/NotFound';
+import TransitionDemo from './features/transitiondemo/TransitionDemo';
 
 
 function App() {
@@ -35,10 +36,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product-filter" element={<><Sidebar /><main className='flex-1 p-8'><ProductFilter products={products} /></main></>} />
-            <Route path="/state-demo" element={<><Sidebar /><main className='flex-1 p-8'><StateDemo /></main></>} />
+            <Route path="/useTransition-19" element={<><Sidebar /><main className='flex-1 p-8'><TransitionDemo /></main></>} />
             <Route path="/effect-demo" element={<><Sidebar /><main className='flex-1 p-8'><EffectDemo /></main></>} />
             <Route path="/parllel-api" element={<><Sidebar /><main className='flex-1 p-8'><ParllelAPI /></main></>} />
             <Route path='/debounce-throttle' element={<><Sidebar /><main className='flex-1 p-8'><DebounceThrottlle /></main></>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>

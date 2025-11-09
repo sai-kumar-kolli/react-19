@@ -1,5 +1,6 @@
 import { FiBell, FiPlus, FiSearch, FiUser, FiMenu } from 'react-icons/fi';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -11,15 +12,14 @@ function Header() {
           <button className="md:hidden mr-2" aria-label="Open sidebar" onClick={() => setSidebarOpen(!sidebarOpen)}>
             <FiMenu size={28} className="text-white" />
           </button>
-          <img src="/vite.svg" alt="Logo" className="h-8 w-8" />
-          <span className="text-xl font-bold text-white tracking-tight">GitHub Enterprise</span>
+          <Link to="/">
+            <img src="/vite.svg" alt="Logo" className="h-8 w-8" />
+          </Link>
+          <span className="text-xl font-bold text-white tracking-tight">React Features Demo</span>
         </div>
         {/* Navigation */}
         <nav className="hidden md:flex gap-6">
-          <a href="#pulls" className="text-gray-200 hover:text-white font-medium">Pull requests</a>
-          <a href="#issues" className="text-gray-200 hover:text-white font-medium">Issues</a>
-          <a href="#marketplace" className="text-gray-200 hover:text-white font-medium">Marketplace</a>
-          <a href="#explore" className="text-gray-200 hover:text-white font-medium">Explore</a>
+          {/* No navigation items here, as the sidebar handles feature navigation */}
         </nav>
         {/* Search & Actions */}
         <div className="flex items-center gap-4">
@@ -35,24 +35,7 @@ function Header() {
           </div>
         </div>
       </div>
-      {/* Mobile Sidebar Overlay */}
-      {sidebarOpen && (
-        <div className="fixed inset-0 z-50 bg-black/40 md:hidden" onClick={() => setSidebarOpen(false)}>
-          <div className="absolute left-0 top-0 h-full w-64 bg-white shadow-lg p-6">
-            <nav className="flex flex-col gap-4 mt-8">
-              <a href="/" className="text-lg font-semibold text-blue-700 hover:text-blue-900">Home</a>
-              <a href="/product-filter" className="text-lg font-semibold text-blue-700 hover:text-blue-900">Product Filter</a>
-              <a href="/state-demo" className="text-lg font-semibold text-blue-700 hover:text-blue-900">State Demo</a>
-              <a href="/effect-demo" className="text-lg font-semibold text-blue-700 hover:text-blue-900">Effect Demo</a>
-            </nav>
-            <div className="mt-10 flex flex-col items-center gap-2">
-              <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="User" className="h-12 w-12 rounded-full border-2 border-blue-200 shadow" />
-              <span className="text-base font-medium text-gray-600">Enterprise User</span>
-              <span className="text-xs text-gray-400">user@company.com</span>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Mobile Sidebar Overlay - Removed */}
     </header>
   );
 }
