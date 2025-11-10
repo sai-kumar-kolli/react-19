@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import featureIllustration from '../assets/feature-illustration.svg';
 
 function HeroSection() {
   return (
@@ -18,7 +19,7 @@ function HeroSection() {
         </Link>
       </div>
       <div className="flex-1 flex justify-center">
-        <img src="/src/assets/feature-illustration.svg" alt="Hero Illustration" className="h-52 w-52 drop-shadow-xl" />
+        <img src={featureIllustration} alt="Hero Illustration" className="h-52 w-52 drop-shadow-xl" />
       </div>
     </div>
   );

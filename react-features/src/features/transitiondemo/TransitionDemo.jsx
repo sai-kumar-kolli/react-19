@@ -1,6 +1,8 @@
 import Traditional from "./Traditional";
 import Transition from "./Transition";
 import ZoomableImage from "../../components/ZoomableImage";
+import perfWithoutTransition from '../../assets/images/perf-without-transition.png';
+import perfWithTransition from '../../assets/images/perf-with-transition.png';
 
 function TransitionDemo() {
 
@@ -27,7 +29,7 @@ function TransitionDemo() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
             <figure className="bg-white shadow rounded p-4">
               <ZoomableImage
-                src="/src/assets/images/perf-without-transition.png"
+                src={perfWithoutTransition}
                 alt="Performance trace without Transition"
                 className="w-full h-auto object-contain rounded hover:shadow-lg transition-shadow"
               />
@@ -38,7 +40,7 @@ function TransitionDemo() {
             </figure>
             <figure className="bg-white shadow rounded p-4">
               <ZoomableImage
-                src="/src/assets/images/perf-with-transition.png"
+                src={perfWithTransition}
                 alt="Performance trace with Transition"
                 className="w-full h-auto object-contain rounded hover:shadow-lg transition-shadow"
               />
@@ -47,7 +49,6 @@ function TransitionDemo() {
               </figcaption>
             </figure>
           </div>
-
         </div>
         <section className="bg-gray-50 py-6 rounded-lg">
           <h2 className="text-2xl font-semibold mb-4">Understanding Transitions</h2>
@@ -66,6 +67,7 @@ function TransitionDemo() {
                 <li>Transition helps in keeping the UI responsive during heavy updates</li>
                 <li>It is ideal for deferring non-urgent updates</li>
                 <li>Not all state updates need to be wrapped in Transition; use it judiciously</li>
+                <li>When a component suspends during a transition, React will delay committing and keep the previous UI visible.</li>
                 <li>Test and profile your application to see if Transition improves performance</li>
                 <li>You must wrap any state updates after any async requests in another startTransition to mark them as Transitions</li>
               </ul>
