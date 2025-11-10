@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { MdFilterList, MdLayers, MdBolt, MdCloud, MdTimer } from 'react-icons/md';
+import sideDecor from '../assets/side-decor.svg';
+import featureIllustration from '../assets/feature-illustration.svg';
 
 const navItems = [
   { name: 'Product Filter', path: '/product-filter', icon: MdFilterList },
@@ -13,9 +15,9 @@ function Sidebar() {
   const location = useLocation();
   return (
     <aside className="hidden md:flex flex-col w-72 min-h-[calc(100vh-4rem)] bg-linear-to-b from-white to-blue-50 border-r shadow-lg py-8 px-6 relative overflow-hidden" aria-label="Sidebar Navigation">
-      <img src="/src/assets/side-decor.svg" alt="Sidebar Decorative Gradient" className="absolute left-0 top-0 h-full w-20 opacity-80 pointer-events-none select-none" style={{ zIndex: 0 }} />
+      <img src={sideDecor} alt="Sidebar Decorative Gradient" className="absolute left-0 top-0 h-full w-20 opacity-80 pointer-events-none select-none" style={{ zIndex: 0 }} />
       <div className="mb-8 flex flex-col items-center relative z-10">
-        <img src="/src/assets/feature-illustration.svg" alt="Feature Illustration" className="h-20 w-20 mb-2" />
+        <img src={featureIllustration} alt="Feature Illustration" className="h-20 w-20 mb-2" />
         <h2 className="text-2xl font-bold text-blue-700">Feature Demos</h2>
       </div>
       <nav className="flex flex-col gap-2 relative z-10" aria-label="Main">

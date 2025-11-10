@@ -1,6 +1,7 @@
 import { FiBell, FiPlus, FiSearch, FiUser, FiMenu } from 'react-icons/fi';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import viteLogo from '/vite.svg';
 
 function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -13,7 +14,7 @@ function Header() {
             <FiMenu size={28} className="text-white" />
           </button>
           <Link to="/">
-            <img src="/vite.svg" alt="Logo" className="h-8 w-8" />
+            <img src={viteLogo} alt="Logo" className="h-8 w-8" />
           </Link>
           <span className="text-xl font-bold text-white tracking-tight">React Features Demo</span>
         </div>
